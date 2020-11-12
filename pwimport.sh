@@ -10,3 +10,4 @@ echo "LINE:  $line"
     echo -e "u = User.find_by_email('$email'); 0\nu.custom_fields['import_pass'] = '$hashedpw'\nu.save" >>  import.rb
 done
 cat import.rb | rails c
+mv import.r{,.old}
